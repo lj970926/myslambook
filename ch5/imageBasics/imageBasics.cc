@@ -4,15 +4,12 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 
-using std::cerr;
-using std::cout;
-using std::endl;
-
+using namespace std;
 int main(int argc, char** argv) {
     cv::Mat image;
     image = cv::imread(argv[1]);
 
-    if (image.data == nullptr) {
+    if (image.data == NULL) {
         cerr << "The file " << argv[1] << "doesn't exist!\n";
         return 0;
     }
@@ -28,4 +25,5 @@ int main(int argc, char** argv) {
         cout << "invaild image type\n";
         return 0;
     }
+    return 0;
 }
